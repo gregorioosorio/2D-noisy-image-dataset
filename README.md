@@ -24,3 +24,11 @@ In order to convert the mnc image to nii run this command:
 ```bash
 $ ./convert_images.bsh
 ```
+
+## Slice 3D image
+
+Using ITK slice the 3D image in a set of 2D images
+
+```bash
+$ ./build/Slice3DImage input3DImage outputPrefix
+```
