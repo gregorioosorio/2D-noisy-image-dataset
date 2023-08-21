@@ -9,5 +9,4 @@ do
 	mnc2nii "$mnc" "./img/nifti/in/${name}.nii"
 	echo "compressing nii file"
 	gzip -f "./img/nifti/in/${name}.nii"
-    rm "./img/nifti/in/${name}.nii"
 done
