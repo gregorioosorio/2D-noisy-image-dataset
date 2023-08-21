@@ -1,0 +1,13 @@
+#!/bin/bash
+
+MNCS=$(ls ./img/mnc/*.mnc)
+
+for mnc in $MNCS
+do
+	name=$(basename $mnc ".mnc")
+	echo "converting $mnc from mnc to nii"
+	mnc2nii "$mnc" "./img/nifti/in/${name}.nii"
+	echo "compressing nii file"
+	gzip -f "./img/nifti/in/${name}.nii"
+    rm "./img/nifti/in/${name}.nii"
+done
