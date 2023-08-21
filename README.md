@@ -29,6 +29,12 @@ $ ./convert_images.bsh
 
 Using ITK slice the 3D image in a set of 2D images
 
+- Generate the clean images:
 ```bash
-$ ./build/Slice3DImage input3DImage outputPrefix
+$ ./build/Slice3DImage ./img/nifti/in/t1_icbm_normal_1mm_pn0_rf20.nii.gz ./img/dataset/clean_1_ 1
+```
+
+- Generate the noisy images:
+```bash
+$ ./build/Slice3DImage ./img/nifti/in/t1_icbm_normal_1mm_pn9_rf20.nii.gz ./img/dataset/noisy_1_ 1
 ```
