@@ -6,7 +6,7 @@ DS_BASEPATH="./img/dataset/noisy"
 # generate the clean dataset images
 echo "Generating clean dataset"
 mkdir -p "${CLEAN_BASEPATH}"
-./build/Slice3DImage "./img/nifti/in/t1_icbm_normal_1mm_pn0_rf20.nii.gz" "${CLEAN_BASEPATH}/clean_" 0
+./build/Slice3DImage "./img/nifti/in/t1_icbm_normal_1mm_pn0_rf20.nii.gz" "${CLEAN_BASEPATH}/clean_" 1
 
 # generate the noisy dataset images
 echo "Generating noisy datasets"
@@ -14,5 +14,5 @@ for i in {1,3,5,7,9}
 do
 	echo "Generating dataset for $i% of noisy"
 	mkdir -p "${DS_BASEPATH}_${i}"
-	./build/Slice3DImage "./img/nifti/in/t1_icbm_normal_1mm_pn${i}_rf20.nii.gz" "${DS_BASEPATH}_${i}/noisy_${i}_" 0
+	./build/Slice3DImage "./img/nifti/in/t1_icbm_normal_1mm_pn${i}_rf20.nii.gz" "${DS_BASEPATH}_${i}/noisy_${i}_" 1
 done
