@@ -13,4 +13,10 @@ add_executable(
   Slice3DImage.cxx
 )
 
+add_executable(
+  ADFFilter
+  GradientAnisotropicDiffusionFilter.cxx
+)
+
 target_link_libraries(${PROJECT_NAME} ${ITK_LIBRARIES})
+target_link_libraries(ADFFilter ${ITK_LIBRARIES})
