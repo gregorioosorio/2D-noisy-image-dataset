@@ -33,3 +33,6 @@
 
 # CMakeLists
 build/*
+
+# vscode
+.vscode/
